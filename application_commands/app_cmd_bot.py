@@ -1,10 +1,9 @@
-from dis_snek.client import Snake
-from dis_snek.models import (
-    listen,
+from dis_snek import (
+    Snake,
     slash_command,
+    InteractionContext,
     slash_option,
     OptionTypes,
-    InteractionContext,
     context_menu,
     CommandTypes,
 )
@@ -33,11 +32,6 @@ async def user_menu(ctx: InteractionContext):
     # this command can be triggered by right clicking a user, and pressing `apps`
     target_user = await bot.get_user(ctx.target_id)
     await ctx.send(f"You clicked on {target_user.mention}")
-
-
-@listen()
-async def on_ready():
-    print(f"Logged in as {bot.user.username}")
 
 
 bot.start("token")

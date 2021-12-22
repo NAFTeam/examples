@@ -1,5 +1,4 @@
-from dis_snek.client import Snake
-from dis_snek.models import message_command, MessageContext, listen
+from dis_snek import Snake, message_command, MessageContext, listen
 
 bot = Snake()
 # by default the prefix will be mentioning your bot

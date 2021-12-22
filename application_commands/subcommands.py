@@ -1,12 +1,7 @@
-from dis_snek.client import Snake
-from dis_snek.models import (
-    listen,
+from dis_snek import (
+    Snake,
     slash_command,
-    slash_option,
-    OptionTypes,
     InteractionContext,
-    context_menu,
-    CommandTypes,
 )
 
 bot = Snake(
